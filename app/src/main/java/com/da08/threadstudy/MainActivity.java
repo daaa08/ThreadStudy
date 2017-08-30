@@ -34,15 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         String url = urlEdit.getText().toString();
         String regex = regexEdit.getText().toString();
-        AsyncTask a = new AsyncTask<String, String, String>() {
+        AsyncTask<String,String,String> a = new AsyncTask<String, String, String>() {
             @Override
             protected String doInBackground(String... strings) {
                 try {
-                    try {
-                        Thread.sleep(10000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
                     URL url = new URL(strings[0].contains("http")?strings[0]:"http://"+strings[0]); //url
                     HttpURLConnection con = (HttpURLConnection) url.openConnection();
 //                    PrintWriter pw = new PrintWriter(con.getOutputStream());
