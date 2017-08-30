@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         urlEdit = (EditText)findViewById(R.id.url);
         regexEdit = (EditText)findViewById(R.id.regex);
         resultTxt = (TextView)findViewById(R.id.result);
+        resultTxt.setMovementMethod(new ScrollingMovementMethod());
         crawlBtn = (Button)findViewById(R.id.crawl);
         crawlBtn.setOnClickListener(this);
     }
