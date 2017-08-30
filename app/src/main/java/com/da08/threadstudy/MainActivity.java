@@ -54,9 +54,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                    for(String s : protocol){
 //                        pw.println(s);
 //                    }
-                    if( isCancelled()){
-                        return "Cancelled";
-                    }
                     Scanner scan = new Scanner(con.getInputStream());
                     StringBuilder sb = new StringBuilder();
 //                    scan.next("\\z");  // "\\z" 전체 문자 끝까지 다 가져옴
